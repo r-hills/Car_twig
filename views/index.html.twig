@@ -10,8 +10,10 @@
         <form action='/create_post'>
         </br><button type="submit" class="btn btn-default">Post Car for Sale</button></br>
         </form>
+
+        
         <h1>Find a Car!</h1>
-        <form action='/display_results'>
+        <form action='/display_results' method='get'>
             <div class='form-group'>
                 <label for='price'>Enter Maximum Price:</label>
                 <input id='price' name='price' class='form-control' type='number'>
@@ -20,6 +22,8 @@
             </div>
             <button type='submit' class='btn-success'>Submit</button>
         </form></br>
+
+
         {% if car_list is not empty %}
 
             {% for car in car_list %}
