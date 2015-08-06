@@ -6,7 +6,19 @@
 </head>
 <body>
     <div class='container'>
-        <h1>Results:</h1>
+        <div class='row'>
+            <div class='col-md-3'>
+                <form action='/'>
+                    <button type='submit'>Return to search</button>
+                </form>
+            </div>
+            <div class='col-md-3'>
+                <form action='/delete_all'>
+                    <button type='submit'>Delete all listings</button>
+                </form>
+            </div>
+        </div>
+            <h1>Results:</h1>
             {% if car_list is not empty %}
 
                 {% for car in car_list %}
